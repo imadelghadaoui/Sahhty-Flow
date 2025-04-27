@@ -1,30 +1,117 @@
-# Health Prediction App
+Sahhty Flow - Health Prediction App
+Welcome to Sahhty Flow, a web application that predicts:
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Whether a patient will show up for their appointment.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/imadelghadaouis-projects/v0-health-prediction-app)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/tU3Kg2GSxLI)
+Their Emergency Severity Index (ESI) level for emergency triage.
 
-## Overview
+This tool helps healthcare providers make quick and informed decisions.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+Features
+Predict Appointment No-Shows.
 
-## Deployment
+Predict Emergency Severity Index (ESI) (Level 1–5).
 
-Your project is live at:
+Modern responsive UI with tabs.
 
-**[https://vercel.com/imadelghadaouis-projects/v0-health-prediction-app](https://vercel.com/imadelghadaouis-projects/v0-health-prediction-app)**
+Dynamic forms with real-time validation and reset functionality.
 
-## Build your app
+API integration for live machine learning predictions.
 
-Continue building your app on:
+Tech Stack
+Next.js 14
 
-**[https://v0.dev/chat/projects/tU3Kg2GSxLI](https://v0.dev/chat/projects/tU3Kg2GSxLI)**
+React (Client components)
 
-## How It Works
+TailwindCSS
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Shadcn/UI components
+
+Lucide-React for icons
+
+External Machine Learning API (via Ngrok URL)
+
+Getting Started
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/sahhty-flow.git
+cd sahhty-flow
+Install dependencies:
+
+nginx
+Copy
+Edit
+npm install
+or
+
+nginx
+Copy
+Edit
+yarn install
+Start the development server:
+
+arduino
+Copy
+Edit
+npm run dev
+or
+
+nginx
+Copy
+Edit
+yarn dev
+Open your browser and visit http://localhost:3000.
+
+API Configuration
+The app is connected to:
+
+cpp
+Copy
+Edit
+https://6287-34-73-229-143.ngrok-free.app
+Endpoints:
+
+POST /predict_noshow → Predict appointment attendance.
+
+POST /predict_esi → Predict emergency severity index (1–5).
+
+⚡ You can change the API URL inside the HealthPredictionApp component by updating the apiUrl variable.
+
+Project Structure
+arduino
+Copy
+Edit
+src/
+  components/
+    ui/         // Shadcn UI components like Button, Card, Input, etc.
+  app/
+    HealthPredictionApp.jsx   // Main health prediction logic
+public/
+README.md
+tailwind.config.js
+package.json
+Usage
+Choose a Tab (Appointment or ESI Prediction).
+
+Fill in patient data (age, gender, conditions, symptoms, etc.).
+
+Click Predict.
+
+View the results instantly.
+
+Reset the form to make another prediction.
+
+Future Improvements
+Add loading animations.
+
+Add form validation and error highlights.
+
+Make API URLs configurable via .env file.
+
+Add user authentication.
+
+License
+This project is open-sourced under the MIT License.
